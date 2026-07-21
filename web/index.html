@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomi Framework - HUD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="hud-container" class="hud">
+        <div class="money-info">
+            <div class="money-item">
+                <span class="label">Készpénz:</span>
+                <span class="value" id="money">$0</span>
+            </div>
+            <div class="money-item">
+                <span class="label">Banki egyenleg:</span>
+                <span class="value" id="bank">$0</span>
+            </div>
+        </div>
+
+        <div class="player-info">
+            <div class="info-item">
+                <span class="label">Munka:</span>
+                <span class="value" id="job">Munkanélküli</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Egészség:</span>
+                <span class="value" id="health">100%</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Pajzs:</span>
+                <span class="value" id="armor">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inventory Modal -->
+    <div id="inventory-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tárgy</h2>
+            <div id="inventory-grid" class="inventory-grid">
+                <!-- Items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Menu Modal -->
+    <div id="job-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Munka Menü</h2>
+            <div id="job-list" class="job-list">
+                <!-- Jobs will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bank Modal -->
+    <div id="bank-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bank</h2>
+            <div class="bank-actions">
+                <div class="action-group">
+                    <label>Összeg:</label>
+                    <input type="number" id="bank-amount" placeholder="0">
+                </div>
+                <button id="deposit-btn" class="btn btn-primary">Befizetés</button>
+                <button id="withdraw-btn" class="btn btn-success">Felvétel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
